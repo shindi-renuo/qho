@@ -1,13 +1,26 @@
 class HomeController < ApplicationController
   def index
-    @calculation = Calculation.new
+    @scz = Scz.new
+    @qho = Qho.new
   end
 
-  def calculate
-    @calculation = Calculation.new(calculate_params)
+  def calculate_qho
+    @qho = Qho.new(qho_params)
 
-    if @calculation.valid?
-      @result = @calculation.calculate
+    if @qho.valid?
+      @result = @qho.calculate
+    else
+      @result = 'Invalid input'
+    end
+
+    render :index
+  end
+
+  def calculate_scz
+    @scz = Scz.new(scz_params)
+
+    if @scz.valid?
+      @result = @scz.calculate
     else
       @result = 'Invalid input'
     end
@@ -17,8 +30,11 @@ class HomeController < ApplicationController
 
   private
 
-  def calculate_params
-    # qho calculation
-    params.require(:calculation).permit(:mass, :omega, :position, :energy)
+  def qho_params
+    params.require(:qho).permit(:mass, :omega, :position, :energy)
+  end
+
+  def scz_params
+    params.require(:scz).permit(:mass)
   end
 end

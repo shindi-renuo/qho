@@ -1,16 +1,10 @@
-class Calculation < ApplicationRecord
-  # mass of the particle
+class Qho < ApplicationRecord
   validates :mass, presence: true, numericality: { greater_than: 0 }
-  # This is the angular frequency
   validates :omega, presence: true, numericality: { greater_than: 0 }
-  # position of the particle
   validates :position, presence: true, numericality: { greater_than: 0 }
-  # energy of the particle (eigenvalue)
   validates :energy, presence: true, numericality: { greater_than: 0 }
 
-  # do qho calculation
   def calculate
-    # hbar (reduced planck num)
     hbar = 1.0545718e-34
     freq = omega / (2 * Math::PI)
     potential_energy = 0.5 * mass * (2 * Math::PI * freq)**2 * position**2

@@ -10,12 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2024_09_03_074105) do
-  create_table "calculations", force: :cascade do |t|
+ActiveRecord::Schema[7.0].define(version: 2024_09_17_131948) do
+  create_table "qhos", force: :cascade do |t|
     t.float "mass"
     t.float "omega"
     t.float "position"
     t.float "energy"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "sczs", force: :cascade do |t|
+    t.float "mass"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

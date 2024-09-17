@@ -1,6 +1,6 @@
-class CreateCalculations < ActiveRecord::Migration[7.0]
+class CreateQhos < ActiveRecord::Migration[7.0]
   def change
-    create_table :calculations do |t|
+    create_table :qhos do |t|
       t.float :mass
       t.float :omega
       t.float :position
