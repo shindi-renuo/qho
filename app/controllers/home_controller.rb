@@ -13,6 +13,8 @@ class HomeController < ApplicationController
       @result = 'Invalid input'
     end
 
+    @scz ||= Scz.new
+
     render :index
   end
 
@@ -24,6 +26,8 @@ class HomeController < ApplicationController
     else
       @result = 'Invalid input'
     end
+
+    @qho ||= Qho.new
 
     render :index
   end
