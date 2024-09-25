@@ -12,7 +12,6 @@ where $\hat{p}$ is the momentum operator, $\hat{x}$ is the position operator, $m
 
 This is a Ruby on Rails app dedicated to solving QHO problems.
 
-**Work in Progress**
 
 ![OSAKER](images/osaker.png)
 ![OSAKER](images/osaker.png)
