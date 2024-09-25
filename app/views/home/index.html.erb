@@ -111,21 +111,32 @@
     const schwarzschildForm = document.getElementById("schwarzschild_form");
     const schwarzschildResult = document.querySelector(".schwarzschild-result");
 
+    // Check if a previous selection exists in sessionStorage
+    const savedType = sessionStorage.getItem("calculation_type");
+    if (savedType) {
+      calculationTypeSelect.value = savedType;
+    }
+
     calculationTypeSelect.addEventListener("change", function() {
-      if (this.value === "qho") {
+      const selectedValue = this.value;
+
+      // Store the selected type in sessionStorage
+      sessionStorage.setItem("calculation_type", selectedValue);
+
+      if (selectedValue === "qho") {
         qhoForm.classList.remove("hidden");
         schwarzschildForm.classList.add("hidden");
-        qhoResult.classList.remove("hidden");
-        schwarzschildResult.classList.add("hidden");
-      } else if (this.value === "schwarzschild") {
+        qhoResult?.classList.remove("hidden");
+        schwarzschildResult?.classList.add("hidden");
+      } else if (selectedValue === "schwarzschild") {
         qhoForm.classList.add("hidden");
         schwarzschildForm.classList.remove("hidden");
-        schwarzschildResult.classList.remove("hidden");
-        qhoResult.classList.add("hidden");
+        schwarzschildResult?.classList.remove("hidden");
+        qhoResult?.classList.add("hidden");
       }
     });
 
-    // Trigger change event to set initial state
+    // Trigger change event to set the initial state based on the stored selection
     calculationTypeSelect.dispatchEvent(new Event("change"));
   });
 </script>
