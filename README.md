@@ -31,12 +31,12 @@ $$
 
 where $r_s$ is the Schwarzschild radius, $G$ is the gravitational constant, $M$ is the mass of the object, and $c$ is the speed of light.
 
-![OSAKER](images/osaker.png)
-![OSAKER](images/osaker.png)
-![OSAKER](images/osaker.png)
-![OSAKER](images/osaker.png)
-![OSAKER](images/osaker.png)
-![OSAKER](images/osaker.png)
+![OSAKER](images/osaker.jpg)
+![OSAKER](images/osaker.jpg)
+![OSAKER](images/osaker.jpg)
+![OSAKER](images/osaker.jpg)
+![OSAKER](images/osaker.jpg)
+![OSAKER](images/osaker.jpg)
 
 ![OSAKER](images/chiyo.png)
 ![OSAKER](images/chiyo.png)
